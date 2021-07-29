@@ -65,14 +65,7 @@ public class Main {
                 //    s_digit_ocuurences ++;
                 //    arr[curr_val] = arr [curr_val] + 1; };
             }
-
         }
-        //System.out.println("Error rate is:  "+ (100.0-(succeeded/100.0)));
-        //System.out.println (n +  " Appered: " + s_digit_ocuurences);
-        //for (int k=0; k<10; k++) {
-        //    System.out.println("Digit " + k + ": " + arr[k]);
-        //}
-
         sc.close();  //closes the scanner
     }
     public static int check(Image im, Node Tree) {
