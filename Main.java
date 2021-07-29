@@ -35,8 +35,8 @@ public class Main {
         int i= 0 ;
         int curr_val;
         double succeeded = 0;
-                                            double Alpha = 0.1; //for NoiseChecks, 0 means no Noise
-                                                    int n = 9; //for ConfusionMatrix
+        double Alpha = 0.1; //for NoiseChecks, 0 means no Noise
+        int n = 9; //for ConfusionMatrix
         int s_digit_ocuurences = 0;
         int[] arr = new int[10]; //for ConfusionMatrix
         for (int k=0; k<10; k++) {
@@ -56,14 +56,10 @@ public class Main {
                 s = sc.next();
                 sc.useDelimiter(",");
                 curr_data[783] = Integer.parseInt(s.substring(1));
-                //Noise(Alpha, curr_data);
+                //Noise(Alpha, curr_data); remove //to make some Noise
                 Image curImage = new Image(curr_data, curr_label);
                 curr_val = check(curImage, my_tree);
                 System.out.println(curr_val);
-                //if (curr_val == curr_label) { succeeded = succeeded+1; }
-                //if (curr_label ==n) {
-                //    s_digit_ocuurences ++;
-                //    arr[curr_val] = arr [curr_val] + 1; };
             }
         }
         sc.close();  //closes the scanner
