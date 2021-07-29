@@ -63,13 +63,7 @@ public class Node {
                 int curIndex=(int)it.next();
                 curImage=allimages[curIndex];
                 curPixelImage=curImage.getPixel(curPixel);
-
-                /*if(check_around(curPixel,curImage))
-                    Lb.add(curIndex);
-                else
-                    La.add(curIndex);*/
-
-                if(curPixelImage>128)// TODO 128
+                if(curPixelImage>128)
                     Lb.add(curIndex);
                 else
                     La.add(curIndex);
@@ -110,7 +104,7 @@ public class Node {
         }
         return HL;
     }
-    //GETTERS
+    //Getters
     public int getData(){
         return data;
     }
@@ -142,7 +136,7 @@ public class Node {
         return images.size();
     }
 
-    //SETTERS
+    //Setters
     public void setData(int new_data){
         this.data=new_data;
     }
@@ -255,8 +249,6 @@ public class Node {
             out.add(get_RowCol_TO_pixel(temp));
         }
 
-        //out.add(p);
-
         if ((cur_Col < 27)) {
             int[] temp = {cur_Row, cur_Col + 1};
             out.add(get_RowCol_TO_pixel(temp));
@@ -289,7 +281,6 @@ public class Node {
             //if (curr.getPixel(x)>128)  passed ++;
             sum+=curr.getPixel(x);
         }
-        //return (passed>half);
         return (sum/(pixel_list.size())>128);
     }
 
